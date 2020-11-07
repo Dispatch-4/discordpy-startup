@@ -20,4 +20,4 @@ async def on_ready():
     channel_sent = client.get_channel(746047616046858322)
     send_message_every_60min.start()
 
-bot.run(token)
+client.run(token)
