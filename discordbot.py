@@ -20,31 +20,26 @@ async def ping(ctx):
 
 bot.run(token)
 
-import discord
-client = discord.Client()
-
 @client.event
 async def on_ready():
     print("on_ready")
     print(discord.__version__)
-
-client.run(Nzc0NzA3MjI0NzIzNDU2MDIx.X6bsUw.4V8BcjfC2LXD2fvG07Fzk6nn2f4)
 
 from discord.ext import tasks
 import discord
 
 client = discord.Client()
 
-channel_sent = None
+channel_sent = 746047616046858322
 
-@tasks.loop(seconds=10)
-async def send_message_every_10sec():
-    await channel_sent.send("10秒経ったよ")
+@tasks.loop(minites=60)
+async def send_message_every_60min():
+    await channel_sent.send("!cnow")
 
     @client.event
 async def on_ready():
     global channel_sent 
-    channel_sent = client.get_channel(any_channel_id)
-    send_message_every_10sec.start()
+    channel_sent = client.get_channel(746047616046858322)
+    send_message_every_60min.start()
 
-client.run("hogehogetoken")
+client.run(token)
