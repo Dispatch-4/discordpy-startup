@@ -14,7 +14,7 @@ channel_sent = 746047616046858322
 async def send_message_every_60min():
     await channel_sent.send("!cnow")
 
-@bot.event
+@client.event
 async def on_ready():
     global channel_sent 
     channel_sent = client.get_channel(746047616046858322)
