@@ -1,5 +1,6 @@
 import discord
 import tasks
+import os
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
