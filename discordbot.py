@@ -1,4 +1,6 @@
-from discord.ext import tasks
+from discord.ext
+import discord
+import tasks
 import os
 import traceback
 
